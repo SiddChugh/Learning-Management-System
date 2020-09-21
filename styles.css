@@ -4,54 +4,56 @@ body { font-family: sans-serif; }
   overflow-y: hidden;
 }
 
-.scene {
-  width: 18em;
-  height: 18em;
+.card {
+  width: 18vw;
+  height: 18vw;
   border: 1px solid transparent;
   perspective: 600px;
   float: left;
   margin: 1em;
 }
 
-.card {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  display: inline-block;
-}
-
-.card__face--back {
-  background: blue;
-  transform: rotateY(180deg);
-  font-size: 0.5em;
-  display: grid;
-}
-
-img {
+#image {
   height: 100%; 
   width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-ul {
-  font-size: 0.5em;
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 50vw; /* Full width */
+  height: 50vw; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  margin-left: 20vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  margin: auto;
+  border: 1px solid transparent;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
