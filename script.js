@@ -1,25 +1,36 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// Get DOM objects by class name
 
-// Get the button that opens the modal
-var img = document.getElementById("image");
+var description_list = document.getElementsByClassName("close");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var image_list = document.getElementsByClassName("image");
 
-// When the user clicks the button, open the modal 
-img.onclick = function() {
-  modal.style.display = "block";
-}
+/*
+-------------------------------------------------------------------------------
+------------------------ Helper Functions -------------------------------------
+-------------------------------------------------------------------------------
+*/
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+var closeModal = function() {
+  var modal_list = document.querySelectorAll(".modal");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+  modal_list.forEach(function (modal) {
     modal.style.display = "none";
-  }
+  })
+}
+
+var openModal = function() {
+  var modal_list = document.querySelectorAll(".modal");
+
+  modal_list.forEach(function (modal) {
+    modal.style.display = "block";
+  })
+}
+
+// Initialize onClick behavior on DOM objects
+for (var i = 0; i < description_list.length; ++i) {
+  description_list[i].addEventListener('click', closeModal, false);
+}
+
+for (var i = 0; i < image_list.length; ++i) {
+  image_list[i].addEventListener('click', openModal, false);
 }
