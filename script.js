@@ -4,6 +4,19 @@ var description_list = document.getElementsByClassName("close");
 
 var image_list = document.getElementsByClassName("image");
 
+// Dictionary to keep track of image and their description pairs
+
+var image_and_description_pairs = {
+  "direct-supervisor-image": "direct-supervisor-modal",
+  "co-worker-image": "co-worker-modal",
+  "injured-image": "injured-modal",
+  "physician-image": "physician-modal",
+  "union-representative-image": "union-representative-modal",
+  "insurance-provider-image": "insurance-provider-modal",
+  "disability-case-management-professional-image": 
+  "disability-case-management-professional-modal"
+};
+
 /*
 -------------------------------------------------------------------------------
 ------------------------ Helper Functions -------------------------------------
@@ -11,24 +24,24 @@ var image_list = document.getElementsByClassName("image");
 */
 
 var closeModal = function() {
-  var modal_list = document.querySelectorAll(".modal");
-
-  modal_list.forEach(function (modal) {
-    modal.style.display = "none";
-  })
-
+  let current_modal = document.getElementById
+                      (event.srcElement.parentElement.id);
+  // Make modal invisible
+  current_modal.style.display = "none";
+  
+  // Unblur images
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = "blur(0)";
   }
 }
 
 var openModal = function() {
-  var modal_list = document.querySelectorAll(".modal");
+  let current_modal = document.getElementById
+                      (image_and_description_pairs[event.srcElement.id]);
+  // Display modal
+  current_modal.style.display = "block";
 
-  modal_list.forEach(function (modal) {
-    modal.style.display = "block";
-  })
-
+  // Blur images
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = "blur(8px)";
   }

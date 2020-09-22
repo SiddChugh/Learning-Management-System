@@ -1,11 +1,14 @@
+body {
+  background-color: rgba(174, 182, 191, 0.4);
+}
 
 #row {
   overflow-y: hidden;
 }
 
 .card {
-  width: 18vw;
-  height: 18vw;
+  width: 15em;
+  height: 15em;
   border: 1px solid transparent;
   perspective: 600px;
   float: left;
@@ -24,32 +27,23 @@
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: absolute;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
-  width: 50vw;
-  /* Full width */
-  height: 50vw;
-  /* Full height */
+  width: 50em;
+  height: 50em;
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(255, 255, 255, 0.1);
-  /* Black w/ opacity */
-  margin-left: 20vw;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
+  margin-left: 10em;
+  margin-top: 5em;
+  margin-bottom: 5em;
   border: 2px groove #045074;
   -webkit-transition: 1.5s;
   transition: all 0.3s linear;
 }
 
-
-/* Modal Content */
 .modal-content {
   position: absolute;
-  margin: 2vw;
+  margin: 2em;
   border: 1px solid transparent;
   width: 80%;
   -webkit-animation-name: zoom;
@@ -57,7 +51,9 @@
   animation-name: zoom;
   animation-duration: 0.6s;
   font-family: "Comic Sans MS";
-  color : #045074;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.5em;
 }
 
 @-webkit-keyframes zoom {
@@ -80,18 +76,21 @@
   }
 }
 
-/* The Close Button */
 .close {
-  color: #045074;
+  color: rgb(21, 67, 96);
   float: right;
   font-size: 28px;
-  font-weight: bold;
-  margin : 1vw;
+  font-weight: 900;
+  margin: 1em;
 }
 
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: rgb(244, 208, 63);
   text-decoration: none;
   cursor: pointer;
+}
+
+h3 {
+  color: rgb(241, 196, 15);
 }
