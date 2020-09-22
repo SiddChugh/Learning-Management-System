@@ -1,8 +1,16 @@
-// Get DOM objects by class name
+// Get DOM objects
 
 var description_list = document.getElementsByClassName("close");
 var image_list = document.getElementsByClassName("image");
+
 var welcomeModal = document.getElementById("welcome-modal");
+var quizModal = document.getElementById("quiz-modal");
+
+var quiz_button = document.getElementById("quiz-button");
+
+// DOM properties constants
+const no_blur = "blur(0)";
+const blur_severity = "blur(8px)";
 
 // Dictionary to keep track of image and their description pairs
 
@@ -23,7 +31,7 @@ var image_and_description_pairs = {
 -------------------------------------------------------------------------------
 */
 
-var closeModal = function() {
+var closeDescriptionModal = function() {
   let current_modal = document.getElementById
                       (event.srcElement.parentElement.id);
   // Make modal invisible
@@ -31,11 +39,15 @@ var closeModal = function() {
   
   // Unblur images
   for (var i = 0; i < image_list.length; ++i) {
-    image_list[i].style.filter = "blur(0)";
+    image_list[i].style.filter = no_blur;
+    image_list[i].style.pointerEvents = "auto";
   }
+
+  // Display quiz button
+  quiz_button.style.display = "block";
 }
 
-var openModal = function() {
+var openDescriptionModal = function() {
   let current_modal = document.getElementById
                       (image_and_description_pairs[event.srcElement.id]);
   // Display modal
@@ -43,35 +55,60 @@ var openModal = function() {
 
   // Blur images
   for (var i = 0; i < image_list.length; ++i) {
-    image_list[i].style.filter = "blur(8px)";
+    image_list[i].style.filter = blur_severity;
+    image_list[i].style.pointerEvents = "none";
   }
+
+  // Hide quiz button
+  quiz_button.style.display = "none";
 }
 
-var welcomeScreen = function() {
+var openWelcomeModal = function() {
   // Display modal
   welcomeModal.style.display = "block";
 
   // Blur images
   for (var i = 0; i < image_list.length; ++i) {
-    image_list[i].style.filter = "blur(8px)";
+    image_list[i].style.filter = blur_severity;
+    image_list[i].style.pointerEvents = "none";
   }
+
+  // Hide quiz button
+  quiz_button.style.display = "none";
 }
 
-var closeWelcomeScreen = function() {
+var closeWelcomeModal = function() {
   // Make modal invisible
   welcomeModal.style.display = "none";
   
   // Unblur images
   for (var i = 0; i < image_list.length; ++i) {
-    image_list[i].style.filter = "blur(0)";
+    image_list[i].style.filter = no_blur;
+     image_list[i].style.pointerEvents = "auto";
   }
+
+  // Display quiz button
+  quiz_button.style.display = "block";
+}
+
+var openQuizModal = function() {
+  // Display modal
+  quizModal.style.display = "block";
+
+  // Blur images
+  for (var i = 0; i < image_list.length; ++i) {
+    image_list[i].style.filter = blur_severity;
+  }
+
+  // Hide quiz button
+  quiz_button.style.display = "none";
 }
 
 // Initialize onClick behavior on DOM objects
 for (var i = 0; i < description_list.length; ++i) {
-  description_list[i].addEventListener('click', closeModal, false);
+  description_list[i].addEventListener('click', closeDescriptionModal, false);
 }
 
 for (var i = 0; i < image_list.length; ++i) {
-  image_list[i].addEventListener('click', openModal, false);
+  image_list[i].addEventListener('click', openDescriptionModal, false);
 }

@@ -8,21 +8,36 @@
   <script src="script.js" defer></script>
 </head>
 
-<body onload = "welcomeScreen()">
-   <div id="welcome-modal">
-      <div id="welcome-modal-content">
-       <h3> Welcome to the Learning Management System 
+<body onload="openWelcomeModal()">
+  <div id="welcome-modal">
+    <div id="welcome-modal-content" class="modal-content">
+      <h3> Welcome to the Learning Management System
         <p>
-        Please click on the team member profile to know more about their respective priorities and concerns in case of a co-worker's injury/illness.
+          Please click on the team member profile to know more about their respective priorities and concerns in case of a co-worker's injury/illness.
+          <p>
+            Afterwards, feel free to take a quiz to review your concepts.
       </h3>
-      </div>
-      <button onclick = "closeWelcomeScreen()"> Proceed </button>
     </div>
+    <button id="proceed-button" onclick="closeWelcomeModal()"> Proceed </button>
+  </div>
+   <div id="quiz-modal">
+    <div id="quiz-modal-content" class="modal-content">
+      <h4>
+        <p>
+          This quiz contains 10 questions and there is no time limit.
+          <br />
+            The test is not official, it's just a nice way to see how much you know, or don't know, about the information you read earlier.
+          <br/>
+          You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.
+        </p>
+        </h4>
+    </div>
+  </div>
   <div id="row">
     <div class="card">
       <img id="direct-supervisor-image" class="image" src="assets/direct-supervisor.png" />
     </div>
-    <div id="direct-supervisor-modal" class="modal">
+    <div id="direct-supervisor-modal" class="description-modal">
       <span class="close">&times;</span>
       <div class="modal-content">
         <h3> Priorities </h3>
@@ -48,7 +63,7 @@
     <div class="card">
       <img id="co-worker-image" class="image" src="assets/co-worker.png" />
     </div>
-    <div id="co-worker-modal" class="modal">
+    <div id="co-worker-modal" class="description-modal">
       <span class="close">&times;</span>
       <div class="modal-content">
         <h3> Priorities </h3>
@@ -74,7 +89,7 @@
     < <div class="card">
       <img id="injured-image" class="image" src="assets/injured.png" />
   </div>
-  <div id="injured-modal" class="modal">
+  <div id="injured-modal" class="description-modal">
     <span class="close">&times;</span>
     <div class="modal-content">
       <h3> Priorities </h3>
@@ -100,7 +115,7 @@
   <div class="card">
     <img id="physician-image" class="image" src="assets/physician.png" />
   </div>
-  <div id="physician-modal" class="modal">
+  <div id="physician-modal" class="description-modal">
     <span class="close">&times;</span>
     <div class="modal-content">
       <h3> Priorities </h3>
@@ -126,7 +141,7 @@
   <div class="card">
     <img id="union-representative-image" class="image" src="assets/union-representative.png" />
   </div>
-  <div id="union-representative-modal" class="modal">
+  <div id="union-representative-modal" class="description-modal">
     <span class="close">&times;</span>
     <div class="modal-content">
       <h3> Priorities </h3>
@@ -151,7 +166,7 @@
   <div class="card">
     <img id="insurance-provider-image" class="image" src="assets/insurance-provider.png" />
   </div>
-  <div id="insurance-provider-modal" class="modal">
+  <div id="insurance-provider-modal" class="description-modal">
     <span class="close">&times;</span>
     <div class="modal-content">
       <h3> Priorities </h3>
@@ -175,7 +190,7 @@
   <div class="card">
     <img id="disability-case-management-professional-image" class="image" src="assets/disability-case-management-professional.png" />
   </div>
-  <div id="disability-case-management-professional-modal" class="modal">
+  <div id="disability-case-management-professional-modal" class="description-modal">
     <span class="close">&times;</span>
     <div class="modal-content">
       <h3> Priorities </h3>
@@ -203,6 +218,7 @@
     </div>
   </div>
   </div>
+  <button id="quiz-button" onclick="openQuizModal()"> Quiz Me </button>
 </body>
 
 </html>

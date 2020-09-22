@@ -29,13 +29,42 @@ body {
   opacity: 0.5;
 }
 
-.modal, 
 #welcome-modal {
   display: none;
   position: absolute;
   z-index: 1;
   width: 50em;
   height: 30em;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-left: 25em;
+  margin-top: 10em;
+  margin-bottom: 5em;
+  border: 2px groove #045074;
+  transition: width 2s, height 2s, transform 1s;
+}
+
+.description-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 50em;
+  height: 50em;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-left: 25em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border: 2px groove #045074;
+  transition: width 2s, height 2s, transform 1s;
+}
+
+#quiz-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 50em;
+  height: 50em;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
   margin-left: 10em;
@@ -48,22 +77,6 @@ body {
 .modal-content {
   position: absolute;
   margin: 1em;
-  border: 1px solid transparent;
-  width: 80%;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  font-family: "Comic Sans MS";
-  font-weight: 900;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.5em;
-}
-
-#welcome-modal-content {
-  position: absolute;
-  margin-top: 3em;
-  margin-left: 3em;
   border: 1px solid transparent;
   width: 80%;
   -webkit-animation-name: zoom;
@@ -102,6 +115,8 @@ body {
   font-size: 28px;
   font-weight: 900;
   margin: 1em;
+  border-style: groove;
+  border-color: rgb(244, 208, 63); 
 }
 
 .close:hover,
@@ -111,23 +126,37 @@ body {
   cursor: pointer;
 }
 
-h3 {
+h3,
+p {
   color: rgb(0, 0, 0);
 }
 
-h1 {
-  font-family: "Comic Sans MS";
-  font-weight: 900;
-  font-size: 1.5em;
-  margin: 1em;
-}
-
-button {
-  position:absolute; 
-  margin-left: 20em;
+#proceed-button {
+  position: relative;
   width: 15em;
   height: 2em;
-  bottom: 3em;
+  top: 32em;
+  left: 20em;
   text-align: center;
   background-color: rgb(244, 208, 63);
+}
+
+#quiz-button {
+  position: relative;
+  margin-left: 35em;
+  width: 25em;
+  height: 7em;
+  top: 5em;
+  bottom: 3em;
+  left: 10em;
+  text-align: center;
+  background-color: rgb(244, 208, 63);
+}
+
+#proceed-button:hover, 
+#proceed-button:focus,
+#quiz-button:hover, 
+#quiz-button:focus {
+  cursor: pointer;
+  background-color: rgb(21, 67, 96);
 }
