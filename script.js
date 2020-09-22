@@ -25,6 +25,21 @@ var image_and_description_pairs = {
   "disability-case-management-professional-modal"
 };
 
+// Dictionary to keep track of answer key
+
+var answer_key = {
+  "first-question": "option-3",
+  "second-question": "option-1",
+  "third-question": "option-2",
+  "fourth-question": "option-2",
+  "fifth-question": "option-1",
+  "sixth-question": "option-4",
+  "seventh-question": "option-1",
+  "eighth-question": "option-4",
+  "ninth-question": "option-3",
+  "tenth-question": "option-3",
+};
+
 /*
 -------------------------------------------------------------------------------
 ------------------------ Helper Functions -------------------------------------
@@ -37,7 +52,7 @@ var closeDescriptionModal = function() {
   // Make modal invisible
   current_modal.style.display = "none";
   
-  // Unblur images
+  // Unblur images and ,make them clickable
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = no_blur;
     image_list[i].style.pointerEvents = "auto";
@@ -53,7 +68,7 @@ var openDescriptionModal = function() {
   // Display modal
   current_modal.style.display = "block";
 
-  // Blur images
+  // Blur images and make them unlickable
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = blur_severity;
     image_list[i].style.pointerEvents = "none";
@@ -67,7 +82,7 @@ var openWelcomeModal = function() {
   // Display modal
   welcomeModal.style.display = "block";
 
-  // Blur images
+  // Blur images and make them unlickable
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = blur_severity;
     image_list[i].style.pointerEvents = "none";
@@ -81,7 +96,7 @@ var closeWelcomeModal = function() {
   // Make modal invisible
   welcomeModal.style.display = "none";
   
-  // Unblur images
+  // Unblur images and ,make them clickable
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = no_blur;
      image_list[i].style.pointerEvents = "auto";
@@ -98,10 +113,39 @@ var openQuizModal = function() {
   // Blur images
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = blur_severity;
+    image_list[i].style.pointerEvents = "none";
   }
 
   // Hide quiz button
   quiz_button.style.display = "none";
+}
+
+var calcQuizResults = function() {
+  let user_input = quizModal.getElementsByTagName('input');
+
+  var correct_answers = 0;
+  var num_questions = 10;
+
+  for (var i = 0; i < user_input.length; ++i) {
+    if (user_input[i].type == "radio" && user_input[i].checked == true) {
+      console.log(user_input[i].name);
+      console.log(user_input[i].value);
+
+      // User answered it right
+      if (user_input[i].value == answer_key[user_input[i].name]) {
+        let user_input_text = user_input[i].nextElementSibling;
+        user_input_text.style.color = "green";
+        correct_answers++;
+      } 
+      // User answered wrong 
+      else {
+        let user_input_text = user_input[i].nextElementSibling;
+        user_input_text.style.color = "red";
+        console.log("wrong");
+      }
+    }
+  }
+  console.log(correct_answers);
 }
 
 // Initialize onClick behavior on DOM objects

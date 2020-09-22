@@ -7,8 +7,8 @@ body {
 }
 
 .card {
-  width: 15em;
-  height: 15em;
+  width: 10em;
+  height: 10em;
   border: 1px solid transparent;
   perspective: 600px;
   float: left;
@@ -37,8 +37,11 @@ body {
   height: 30em;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-left: 25em;
-  margin-top: 10em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 5em;
+  left: 15em;
+  top: 5em;
   margin-bottom: 5em;
   border: 2px groove #045074;
   transition: width 2s, height 2s, transform 1s;
@@ -64,10 +67,10 @@ body {
   position: absolute;
   z-index: 1;
   width: 50em;
-  height: 50em;
+  height: 70em;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-left: 10em;
+  margin-left: 20em;
   margin-top: 5em;
   margin-bottom: 5em;
   border: 2px groove #045074;
@@ -141,9 +144,21 @@ p {
   background-color: rgb(244, 208, 63);
 }
 
-#quiz-button {
+#quiz-button
+{
   position: relative;
-  margin-left: 35em;
+  width: 25em;
+  height: 7em;
+  top: 5em;
+  bottom: 3em;
+  left: 15em;
+  text-align: center;
+  background-color: rgb(244, 208, 63);
+}
+
+#submit-answers {
+  position: relative;
+  margin-left: 5em;
   width: 25em;
   height: 7em;
   top: 5em;
