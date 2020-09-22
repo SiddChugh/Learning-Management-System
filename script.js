@@ -16,6 +16,10 @@ var closeModal = function() {
   modal_list.forEach(function (modal) {
     modal.style.display = "none";
   })
+
+  for (var i = 0; i < image_list.length; ++i) {
+    image_list[i].style.filter = "blur(0)";
+  }
 }
 
 var openModal = function() {
@@ -24,6 +28,10 @@ var openModal = function() {
   modal_list.forEach(function (modal) {
     modal.style.display = "block";
   })
+
+  for (var i = 0; i < image_list.length; ++i) {
+    image_list[i].style.filter = "blur(8px)";
+  }
 }
 
 // Initialize onClick behavior on DOM objects
