@@ -97,7 +97,7 @@ body {
 }
 
 .close {
-  color: rgb(21, 67, 96);
+  color: rgb(244, 208, 63);
   float: right;
   font-size: 28px;
   font-weight: 900;
@@ -106,7 +106,7 @@ body {
 
 .close:hover,
 .close:focus {
-  color: rgb(244, 208, 63);
+  color: rgb(21, 67, 96);
   text-decoration: none;
   cursor: pointer;
 }
