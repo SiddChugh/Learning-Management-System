@@ -1,8 +1,8 @@
 // Get DOM objects by class name
 
 var description_list = document.getElementsByClassName("close");
-
 var image_list = document.getElementsByClassName("image");
+var welcomeModal = document.getElementById("welcome-modal");
 
 // Dictionary to keep track of image and their description pairs
 
@@ -44,6 +44,26 @@ var openModal = function() {
   // Blur images
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = "blur(8px)";
+  }
+}
+
+var welcomeScreen = function() {
+  // Display modal
+  welcomeModal.style.display = "block";
+
+  // Blur images
+  for (var i = 0; i < image_list.length; ++i) {
+    image_list[i].style.filter = "blur(8px)";
+  }
+}
+
+var closeWelcomeScreen = function() {
+  // Make modal invisible
+  welcomeModal.style.display = "none";
+  
+  // Unblur images
+  for (var i = 0; i < image_list.length; ++i) {
+    image_list[i].style.filter = "blur(0)";
   }
 }
 

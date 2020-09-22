@@ -8,7 +8,16 @@
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload = "welcomeScreen()">
+   <div id="welcome-modal">
+      <div id="welcome-modal-content">
+       <h3> Welcome to the Learning Management System 
+        <p>
+        Please click on the team member profile to know more about their respective priorities and concerns in case of a co-worker's injury/illness.
+      </h3>
+      </div>
+      <button onclick = "closeWelcomeScreen()"> Proceed </button>
+    </div>
   <div id="row">
     <div class="card">
       <img id="direct-supervisor-image" class="image" src="assets/direct-supervisor.png" />

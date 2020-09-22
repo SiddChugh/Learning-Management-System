@@ -22,28 +22,48 @@ body {
   cursor: pointer;
   transition: 0.3s;
   object-fit: contain;
-
 }
 
-.modal {
+.image:hover,
+.image:focus {
+  opacity: 0.5;
+}
+
+.modal, 
+#welcome-modal {
   display: none;
   position: absolute;
   z-index: 1;
   width: 50em;
-  height: 50em;
+  height: 30em;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
   margin-left: 10em;
   margin-top: 5em;
   margin-bottom: 5em;
   border: 2px groove #045074;
-  -webkit-transition: 1.5s;
-  transition: all 0.3s linear;
+  transition: width 2s, height 2s, transform 1s;
 }
 
 .modal-content {
   position: absolute;
-  margin: 2em;
+  margin: 1em;
+  border: 1px solid transparent;
+  width: 80%;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  font-family: "Comic Sans MS";
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.5em;
+}
+
+#welcome-modal-content {
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 3em;
   border: 1px solid transparent;
   width: 80%;
   -webkit-animation-name: zoom;
@@ -92,5 +112,22 @@ body {
 }
 
 h3 {
-  color: rgb(241, 196, 15);
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+button {
+  position:absolute; 
+  margin-left: 20em;
+  width: 15em;
+  height: 2em;
+  bottom: 3em;
+  text-align: center;
+  background-color: rgb(244, 208, 63);
 }
