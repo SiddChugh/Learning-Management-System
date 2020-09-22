@@ -6,11 +6,16 @@ var image_list = document.getElementsByClassName("image");
 var welcomeModal = document.getElementById("welcome-modal");
 var quizModal = document.getElementById("quiz-modal");
 
+var user_input = quizModal.getElementsByTagName('input');
+
 var quiz_button = document.getElementById("quiz-button");
 
 // DOM properties constants
 const no_blur = "blur(0)";
 const blur_severity = "blur(8px)";
+
+const wrong_answer_color = "red";
+const correct_answer_color = "green";
 
 // Dictionary to keep track of image and their description pairs
 
@@ -118,30 +123,42 @@ var openQuizModal = function() {
 
   // Hide quiz button
   quiz_button.style.display = "none";
+  
+  // Remove color coding of answers and previous score
+  for (var i = 0; i < user_input.length; ++i) {
+    if (user_input[i].type == "radio") {
+      let user_input_text = user_input[i].nextElementSibling;
+      user_input_text.style.color = "initial";
+    }
+  }
 }
 
 var calcQuizResults = function() {
-  let user_input = quizModal.getElementsByTagName('input');
-
   var correct_answers = 0;
   var num_questions = 10;
 
   for (var i = 0; i < user_input.length; ++i) {
     if (user_input[i].type == "radio" && user_input[i].checked == true) {
-      console.log(user_input[i].name);
-      console.log(user_input[i].value);
-
+    
       // User answered it right
       if (user_input[i].value == answer_key[user_input[i].name]) {
+        // Highlight Correct Answer
         let user_input_text = user_input[i].nextElementSibling;
-        user_input_text.style.color = "green";
+        user_input_text.style.color = correct_answer_color;
+
+        // increment correct answer count
         correct_answers++;
       } 
       // User answered wrong 
       else {
+        // Highlight Wrong Answer
         let user_input_text = user_input[i].nextElementSibling;
-        user_input_text.style.color = "red";
-        console.log("wrong");
+        user_input_text.style.color = wrong_answer_color;
+
+        // Highlight Correct Answer
+        let correct_answer_label_id = user_input[i].name + "-" + answer_key[user_input[i].name];
+        let correct_answer_text_label = document.getElementById(correct_answer_label_id).nextElementSibling;
+        correct_answer_text_label.style.color = correct_answer_color;        
       }
     }
   }
