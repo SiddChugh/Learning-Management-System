@@ -1,5 +1,10 @@
-This web page serves as an module for a Learning Management System (LSM) that focuses on occupational health and safety. The goal of this module is about the priorities and concerns; work team members will have during a worker's injury/illness. <p>
+This web page serves as an module for a Learning Management System (LSM) that focuses on occupational health and safety. The goal of this module is to educate students about the priorities and concerns; work team members will have during a worker's injury/illness. <p>
 This UX of this web page is adapted to provide a desirable experience on different screen resolutions to maximize audience engagement. <p>
+
+| Device Used| Resolution    |
+| ------------- | ------------- |
+| Laptop  | <i> 1366 * 768 </i>  |
+| Mobile  | <i> 360 * 640 </i>  |
 
 <h1> Landing Page Preview </h1>
 
