@@ -41,9 +41,6 @@ var answer_key = {
   "fifth-question": "option-1",
   "sixth-question": "option-4",
   "seventh-question": "option-1",
-  "eighth-question": "option-4",
-  "ninth-question": "option-3",
-  "tenth-question": "option-3",
 };
 
 /*
@@ -143,7 +140,7 @@ var openQuizModal = function() {
 
 var calcQuizResults = function() {
   var correct_answers = 0;
-  let num_questions = 10;
+  let num_questions = 7;
 
   for (var i = 0; i < user_input.length; ++i) {
     if (user_input[i].type == "radio" && user_input[i].checked == true) {
