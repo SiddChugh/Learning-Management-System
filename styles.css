@@ -33,7 +33,7 @@ body {
   position: absolute;
   z-index: 1;
   width: 50em;
-  height: 30em;
+  height: 40em;
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 5em;
   left: 7em;
@@ -41,7 +41,6 @@ body {
   margin-bottom: 5em;
   border: 2px groove #045074;
   transition: width 2s, height 2s, transform 1s;
-  vertical-align: center;
 }
 
 .description-modal,
@@ -121,7 +120,7 @@ p {
   position: relative;
   width: 15em;
   height: 2em;
-  top: 32em;
+  top: 40em;
   left: 20em;
   text-align: center;
   background-color: rgb(244, 208, 63);

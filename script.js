@@ -175,9 +175,12 @@ var calcQuizResults = function() {
   submit_answers_button.style.display = "none";
 
   // Display results
-  document.getElementById("quiz-results").innerHTML = "You scored " + 
+  document.getElementById("quiz-results").innerHTML = "You answered " + 
                                                       correct_answers + 
-                                                      " / " + num_questions;
+                                                      " / " + num_questions
+                                                      + " questions \
+                                                      correctly. <p> \
+                                                      THANK YOU </p>";
 }
 
 // Initialize onClick behavior on DOM objects
