@@ -7,10 +7,9 @@ body {
 }
 
 .card {
-  width: 10em;
-  height: 10em;
+  width: 15em;
+  height: 15em;
   border: 1px solid transparent;
-  perspective: 600px;
   float: left;
   margin: 1em;
 }
@@ -35,46 +34,30 @@ body {
   z-index: 1;
   width: 50em;
   height: 30em;
-  overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-left: 5em;
-  margin-right: 5em;
   margin-top: 5em;
-  left: 15em;
+  left: 7em;
   top: 5em;
   margin-bottom: 5em;
   border: 2px groove #045074;
   transition: width 2s, height 2s, transform 1s;
+  vertical-align: center;
 }
 
-.description-modal {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  width: 50em;
-  height: 50em;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-left: 25em;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  border: 2px groove #045074;
-  transition: width 2s, height 2s, transform 1s;
-}
-
+.description-modal,
 #quiz-modal {
   display: none;
   position: absolute;
   z-index: 1;
-  width: 50em;
-  height: 70em;
+  width: 45em;
+  height: 50em;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-left: 20em;
   margin-top: 5em;
   margin-bottom: 5em;
   border: 2px groove #045074;
   transition: width 2s, height 2s, transform 1s;
+  left: 10em;
 }
 
 .modal-content {
@@ -149,8 +132,7 @@ p {
   width: 25em;
   height: 7em;
   top: 5em;
-  bottom: 3em;
-  left: 35em;
+  left: 22em;
   text-align: center;
   background-color: rgb(244, 208, 63);
 }
@@ -163,8 +145,7 @@ p {
   height: 7em;
   top: 5em;
   bottom: 3em;
-  left: 10em;
-  text-align: center;
+  left: 5em;
   background-color: rgb(244, 208, 63);
 }
 
