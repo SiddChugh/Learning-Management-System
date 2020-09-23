@@ -1,20 +1,15 @@
-This web page serves as an module for a Learning Management System (LSM) that focuses on occupational health and safety. The goal of this module is to educate students about the priorities and concerns; work team members will have during a worker's injury/illness. <p>
-This UX of this web page is adapted to provide a desirable experience on different screen resolutions to maximize audience engagement. <p>
+This web page serves as a module for a Learning Management System (LSM) that focuses on occupational health and safety. The main goal of this module is to educate students about the priorities and concerns of team members in case of a co-worker's injury/illness. <p>
+This UX of this web page is adapted to provide a desirable experience on popular screen resolutions to maximize audience engagement. <p>
 
-| Device Used| Resolution    |
-| ------------- | ------------- |
-| Laptop  | <i> 1366 * 768 </i>  |
-| Mobile  | <i> 360 * 640 </i>  |
-
-<h1> Landing Page Preview </h1>
+<h3> Landing Page Preview </h1>
 
 ![Landing Page](assets/landing_page.PNG)
 
-<p> Simply clicking on the team member profile would show their concerns and priotities
+<p> Simply clicking on the team member profile would show their concerns and priorities.
 
 ![Description](assets/description_preview.PNG)
 
-<p> Afterwards, users can take a quiz to review the educational material.
+<p> Afterwards, users can opt to take a quiz to review their grasp on educational material.
 
 ![Quiz Preview](assets/quiz_preview.PNG)
 
