@@ -20,32 +20,154 @@
     </div>
     <button id="proceed-button" onclick="closeWelcomeModal()"> Proceed </button>
   </div>
-   <div id="quiz-modal">
+  <div id="quiz-modal">
     <span class="close">&times;</span>
     <div id="quiz-modal-content" class="modal-content">
-        <p>
-          This quiz contains 10 questions and there is no time limit.
-          <br />
-            The test is not official, it's just a nice way to see how much you know, or don't know, about the information you read earlier.
-          <br/>
-          You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.
-        </p>
+      <p>
+        This quiz contains 10 questions and there is no time limit.
         <br />
+        The test is not official, it's just a nice way to see how much you know, or don't know, about the information you read earlier.
         <br />
-        <p>
-          Question 1
-          <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
-          Which one is a valid concern for an injured worker ?
-          <input type="radio" id="first-question-option-1" name="first-question" value="option-one" checked="true"> 
-          <label for = "first-question-option-1" > Cost of supporting return to work </label> <br />
-          <input type="radio" id="first-question-option-2" name="first-question" value="option-2"> 
-          <label for = "first-question-option-2" > Administration time to manage the absent worker’s claim </label> <br />
-          <input type="radio" id="first-question-option-3" name="first-question" value="option-3"> 
-          <label for = "first-question-option-3" > Concern with what employer and co-workers think  </label> <br />
-          <input type="radio" id="first-question-option-4" name="first-question" value="option-4"> 
-          <label for = "first-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
-        </p>
-        <button id="submit-answers" onclick="calcQuizResults()"> Submit Answers </button> 
+        You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.
+      </p>
+      <br />
+      <br />
+      <p>
+        Question 1
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="first-question-option-1" name="first-question" value="option-1" checked="true">
+        <label for="first-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="first-question-option-2" name="first-question" value="option-2">
+        <label for="first-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="first-question-option-3" name="first-question" value="option-3">
+        <label for="first-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="first-question-option-4" name="first-question" value="option-4">
+        <label for="first-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 2
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="second-question-option-1" name="second-question" value="option-1" checked="true">
+        <label for="second-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="second-question-option-2" name="second-question" value="option-2">
+        <label for="second-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="second-question-option-3" name="second-question" value="option-3">
+        <label for="second-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="second-question-option-4" name="second-question" value="option-4">
+        <label for="second-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 3
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="third-question-option-1" name="third-question" value="option-1" checked="true">
+        <label for="third-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="third-question-option-2" name="third-question" value="option-2">
+        <label for="third-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="third-question-option-3" name="third-question" value="option-3">
+        <label for="third-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="third-question-option-4" name="third-question" value="option-4">
+        <label for="third-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 4
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="fourth-question-option-1" name="fourth-question" value="option-1" checked="true">
+        <label for="fourth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="fourth-question-option-2" name="fourth-question" value="option-2">
+        <label for="fourth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="fourth-question-option-3" name="fourth-question" value="option-3">
+        <label for="fourth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="fourth-question-option-4" name="fourth-question" value="option-4">
+        <label for="fourth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 5
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="fifth-question-option-1" name="fifth-question" value="option-1" checked="true">
+        <label for="fifth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="fifth-question-option-2" name="fifth-question" value="option-2">
+        <label for="fifth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="fifth-question-option-3" name="fifth-question" value="option-3">
+        <label for="fifth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="fifth-question-option-4" name="fifth-question" value="option-4">
+        <label for="fifth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 6
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="sixth-question-option-1" name="sixth-question" value="option-1" checked="true">
+        <label for="sixth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="sixth-question-option-2" name="sixth-question" value="option-2">
+        <label for="sixth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="sixth-question-option-3" name="sixth-question" value="option-3">
+        <label for="sixth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="sixth-question-option-4" name="sixth-question" value="option-4">
+        <label for="sixth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 7
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="seventh-question-option-1" name="seventh-question" value="option-1" checked="true">
+        <label for="seventh-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="seventh-question-option-2" name="seventh-question" value="option-2">
+        <label for="seventh-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="seventh-question-option-3" name="seventh-question" value="option-3">
+        <label for="seventh-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="seventh-question-option-4" name="seventh-question" value="option-4">
+        <label for="seventh-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 8
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="eighth-question-option-1" name="eighth-question" value="option-1" checked="true">
+        <label for="eighth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="eighth-question-option-2" name="eighth-question" value="option-2">
+        <label for="eighth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="eighth-question-option-3" name="eighth-question" value="option-3">
+        <label for="eighth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="eighth-question-option-4" name="eighth-question" value="option-4">
+        <label for="eighth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 9
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="ninth-question-option-1" name="ninth-question" value="option-1" checked="true">
+        <label for="ninth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="ninth-question-option-2" name="ninth-question" value="option-2">
+        <label for="ninth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="ninth-question-option-3" name="ninth-question" value="option-3">
+        <label for="ninth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="ninth-question-option-4" name="ninth-question" value="option-4">
+        <label for="ninth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <p>
+        Question 10
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ?
+        <input type="radio" id="tenth-question-option-1" name="tenth-question" value="option-1" checked="true">
+        <label for="tenth-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="tenth-question-option-2" name="tenth-question" value="option-2">
+        <label for="tenth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="tenth-question-option-3" name="tenth-question" value="option-3">
+        <label for="tenth-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="tenth-question-option-4" name="tenth-question" value="option-4">
+        <label for="tenth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <div id="quiz-results" class="modal-content">
+      </div>
+      <button id="submit-answers" onclick="calcQuizResults()"> Submit Answers </button>
     </div>
   </div>
   <div id="row">

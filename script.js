@@ -9,6 +9,7 @@ var quizModal = document.getElementById("quiz-modal");
 var user_input = quizModal.getElementsByTagName('input');
 
 var quiz_button = document.getElementById("quiz-button");
+var submit_answers_button = document.getElementById("submit-answers");
 
 // DOM properties constants
 const no_blur = "blur(0)";
@@ -81,6 +82,9 @@ var openDescriptionModal = function() {
 
   // Hide quiz button
   quiz_button.style.display = "none";
+
+  // Hide Submit Answers button
+  submit_answers_button.style.display = "none";
 }
 
 var openWelcomeModal = function() {
@@ -115,6 +119,9 @@ var openQuizModal = function() {
   // Display modal
   quizModal.style.display = "block";
 
+  // Display Submit Answers button
+  submit_answers_button.style.display = "block";
+
   // Blur images
   for (var i = 0; i < image_list.length; ++i) {
     image_list[i].style.filter = blur_severity;
@@ -123,7 +130,7 @@ var openQuizModal = function() {
 
   // Hide quiz button
   quiz_button.style.display = "none";
-  
+ 
   // Remove color coding of answers and previous score
   for (var i = 0; i < user_input.length; ++i) {
     if (user_input[i].type == "radio") {
@@ -131,11 +138,12 @@ var openQuizModal = function() {
       user_input_text.style.color = "initial";
     }
   }
+  document.getElementById("quiz-results").innerHTML= "";
 }
 
 var calcQuizResults = function() {
   var correct_answers = 0;
-  var num_questions = 10;
+  let num_questions = 10;
 
   for (var i = 0; i < user_input.length; ++i) {
     if (user_input[i].type == "radio" && user_input[i].checked == true) {
@@ -156,13 +164,23 @@ var calcQuizResults = function() {
         user_input_text.style.color = wrong_answer_color;
 
         // Highlight Correct Answer
-        let correct_answer_label_id = user_input[i].name + "-" + answer_key[user_input[i].name];
-        let correct_answer_text_label = document.getElementById(correct_answer_label_id).nextElementSibling;
+        let correct_answer_label_id = user_input[i].name + "-" + 
+                                      answer_key[user_input[i].name];
+        let correct_answer_text_label = document.getElementById
+                                        (correct_answer_label_id).
+                                        nextElementSibling;
         correct_answer_text_label.style.color = correct_answer_color;        
       }
     }
   }
-  console.log(correct_answers);
+
+  // Hide Submit Answers button
+  submit_answers_button.style.display = "none";
+
+  // Display results
+  document.getElementById("quiz-results").innerHTML = "You scored " + 
+                                                      correct_answers + 
+                                                      " / " + num_questions;
 }
 
 // Initialize onClick behavior on DOM objects
