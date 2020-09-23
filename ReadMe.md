@@ -1,4 +1,4 @@
-This web page serves as a module for a Learning Management System (LSM) that focuses on occupational health and safety. The main goal of this module is to educate students about the priorities and concerns of team members in case of a co-worker's injury/illness. <p>
+This web page serves as a module for a Learning Management System (LMS) that focuses on occupational health and safety. The main goal of this module is to educate students about the priorities and concerns of team members in case of a co-worker's injury/illness. <p>
 This UX of this web page is adapted to provide a desirable experience on popular screen resolutions to maximize audience engagement. <p>
 
 <h3> Landing Page Preview </h1>
